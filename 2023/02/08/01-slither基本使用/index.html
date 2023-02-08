@@ -20,28 +20,36 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="PoBiMa">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="01.slither基本使用1.打印选项的使用Slither 带有一组内置的打印模块，可以显示有关合约的高级信息。目前支持19个打印模块，支持的列表如下，具体使用可以参考下面链接。 12cfg, constructor-calls, contract-summary, data-dependency, echidna, function-id, function-summary, modifier">
+<meta property="og:type" content="article">
+<meta property="og:title" content="01 slither基本使用">
+<meta property="og:url" content="http://example.com/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="PoBiMa">
+<meta property="og:description" content="01.slither基本使用1.打印选项的使用Slither 带有一组内置的打印模块，可以显示有关合约的高级信息。目前支持19个打印模块，支持的列表如下，具体使用可以参考下面链接。 12cfg, constructor-calls, contract-summary, data-dependency, echidna, function-id, function-summary, modifier">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Untitled.png">
+<meta property="article:published_time" content="2023-02-08T11:30:07.000Z">
+<meta property="article:modified_time" content="2023-02-08T11:34:11.594Z">
 <meta property="article:author" content="pobima">
+<meta property="article:tag" content="工具使用">
+<meta property="article:tag" content="slither">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Untitled.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>PoBiMa</title>
+  <title>01 slither基本使用 | PoBiMa</title>
   
 
 
@@ -150,9 +158,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -168,10 +177,9 @@
       <meta itemprop="name" content="PoBiMa">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">01 slither基本使用</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          01 slither基本使用
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -204,7 +212,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="01-slither基本使用"><a href="#01-slither基本使用" class="headerlink" title="01.slither基本使用"></a>01.slither基本使用</h1><h1 id="1-打印选项的使用"><a href="#1-打印选项的使用" class="headerlink" title="1.打印选项的使用"></a>1.打印选项的使用</h1><p>Slither 带有一组内置的打印模块，可以显示有关合约的高级信息。目前支持19个打印模块，支持的列表如下，具体使用可以参考下面链接。</p>
+        <h1 id="01-slither基本使用"><a href="#01-slither基本使用" class="headerlink" title="01.slither基本使用"></a>01.slither基本使用</h1><h1 id="1-打印选项的使用"><a href="#1-打印选项的使用" class="headerlink" title="1.打印选项的使用"></a>1.打印选项的使用</h1><p>Slither 带有一组内置的打印模块，可以显示有关合约的高级信息。目前支持19个打印模块，支持的列表如下，具体使用可以参考下面链接。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cfg, constructor-calls, contract-summary, data-dependency, echidna, function-id, function-summary, modifiers, call-graph, evm, human-summary, inheritance, inheritance-graph, slithir, slithir-ssa, pausable, vars-and-auth, require,</span><br><span class="line">variable-order</span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="https://github.com/crytic/slither/wiki/Printer-documentation">https://github.com/crytic/slither/wiki/Printer-documentation</a></p>
@@ -303,141 +311,68 @@
 <p>solc-select官方github</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/crytic/solc-select/">https://github.com/crytic/solc-select/</a></p>
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/08/00-slither-install/">
+      <div style="display: inline-block;">
+        <img src="/images/wechat_pay.png" alt="pobima 微信支付">
+        <p>微信支付</p>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="pobima">
-      <meta itemprop="description" content="">
-    </span>
+  </div>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PoBiMa">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/08/00-slither-install/" class="post-title-link" itemprop="url">00.slither简介与安装</a>
-        </h2>
+        
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-              <time title="创建时间：2023-02-08 17:10:31 / 修改时间：19:09:05" itemprop="dateCreated datePublished" datetime="2023-02-08T17:10:31+08:00">2023-02-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">工具使用</span></a>
-                </span>
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/xiaoju521_weixinhao.png">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
             </span>
 
-          
-
+            <span class="label">WeChat</span>
+          </a>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-什么是slither"><a href="#1-什么是slither" class="headerlink" title="1.什么是slither"></a>1.什么是slither</h1><p>Slither 是 Solidity 的第一个开源静态分析框架。 Slither 基于python开发，它可以无需用户干预的情况下在几秒钟内找到真正的漏洞。它是高度<code>可定制化</code>的，并提供一组 <code>API接口</code> 来轻松检查和分析 Solidity 代码。在智能全约的安全审查中经常使用它，现在您可以将它集成到自己的代码审查系统中。 </p>
-<p>目前 Slither 已经<code>开源</code>了核心分析引擎。该核心提供高级<code>静态分析</code>功能，包括具有<code>污点跟踪</code>功能的中间表示 (SlithIR)，可以在其上构建复杂的检测器。默认系统中包含了许多检测器（如已经包含了检测重入和自杀合约的检测器）。</p>
-<p>主要特征是：</p>
-<ul>
-<li>可定制化，API接口</li>
-<li>开源，检测器多</li>
-<li>静态分析和污点跟踪</li>
-</ul>
-<h2 id="Slither-的工作原理"><a href="#Slither-的工作原理" class="headerlink" title="Slither 的工作原理"></a>Slither 的工作原理</h2><ol>
-<li>它以 Solidity 编译器生成的 Solidity 抽象语法树 (AST) 作为初始输入。</li>
-<li>然后它会生成重要信息，例如合约的<code>继承图</code>、<code>控制流图 (CFG)</code> 以及合约中所有<code>表达式</code>的列表。 </li>
-<li>Slither 然后将合约的代码翻译成 SlithIR，这是一种内部表示语言，可以更轻松地编写精确和准确的分析。 </li>
-<li>Slither 运行一组预定义的分析，为其他模块（例如，计算数据流、受保护的函数调用等）提供增强的信息。</li>
-</ol>
-<img src="/2023/02/08/00-slither-install/Untitled.jpg" class title="flow">
-
-<h2 id="性能优势"><a href="#性能优势" class="headerlink" title="性能优势"></a>性能优势</h2><p>官方使用重入检测器对 Etherscan 提供源代码的一千个最常用的合约（交易数量最多的合约）进行了实验(每个合约最多执行120秒)，对主流的几款检测工具，得到的结果如下：</p>
-<p>不管从准确性，性能，健壮性等方面，slither都比较优秀。</p>
-<img src="/2023/02/08/00-slither-install/Untitled1.png" class title="flow">
-
-<p>可以参考<a target="_blank" rel="noopener" href="https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/">https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/</a></p>
-<h2 id="slither不足"><a href="#slither不足" class="headerlink" title="slither不足"></a>slither不足</h2><p>SlithIR 仍然存在一些局限性并且有改进的空间。主要的不足有：</p>
-<ul>
-<li>缺乏形式语义。形式语义会可以带来更严谨的分析方法。</li>
-<li>支持高级表达式从而无法准确反映低级信息，例如无法评估 gas 的消耗等。</li>
-</ul>
-<h1 id="2-mac下slither安装"><a href="#2-mac下slither安装" class="headerlink" title="2.mac下slither安装"></a>2.mac下slither安装</h1><h2 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">bin</span>/ruby -e <span class="string">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span></span><br><span class="line"></span><br><span class="line">brew update</span><br><span class="line">brew upgrade</span><br><span class="line">brew tap ethereum/ethereum</span><br><span class="line">brew install solidity</span><br><span class="line">brew linkapps solidity</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装solc-select"><a href="#安装solc-select" class="headerlink" title="安装solc-select****"></a>安装solc-select****</h2><p><code>pip3 install solc-select</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用0.4.24版本</span></span><br><span class="line">solc-select use <span class="number">0.4</span><span class="number">.24</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印所有可用的版本</span></span><br><span class="line">solc-select install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装0.8.1版本</span></span><br><span class="line">solc-select install <span class="number">0.8</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="安装slither"><a href="#安装slither" class="headerlink" title="安装slither"></a>安装slither</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Using Pip</span><br><span class="line">pip3 install slither-analyzer</span><br><span class="line"></span><br><span class="line">Using Git</span><br><span class="line">git clone https://github.com/crytic/slither.git &amp;&amp; cd slither</span><br><span class="line">python3 setup.py install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="3-slither的目录结构"><a href="#3-slither的目录结构" class="headerlink" title="3.slither的目录结构"></a>3.slither的目录结构</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── analyses # 提供附加信息，例如数据依赖性分析，evm合约、函数、节点的分析等。</span><br><span class="line">├── core # 把各类东西联系在一起</span><br><span class="line">├── detectors # 检测器。各种检测规则</span><br><span class="line">├── slither.py # 入口脚本</span><br><span class="line">├── slithir # 包含 slither 的中间表示的语义</span><br><span class="line">├── solc_parsing #负责解析solc AST(抽象语法树)</span><br><span class="line">├── tools # 建立在 slither 之上的各种工具</span><br><span class="line">├── visitors # 解析表达式并转换为 slithir</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
-
-<h1 id="4-slither中常用的概念"><a href="#4-slither中常用的概念" class="headerlink" title="4. slither中常用的概念"></a>4. slither中常用的概念</h1><h2 id="SlitherIR"><a href="#SlitherIR" class="headerlink" title="SlitherIR"></a>SlitherIR</h2><blockquote>
-<p>什么是IR</p>
-</blockquote>
-<p>在语言设计中，编译器通常对一种语言的<code>“中间表示”(IR)</code> 进行操作，在这种中间语言中可以看到程序解析时额外细节。<br><a target="_blank" rel="noopener" href="https://github.com/crytic/slither/wiki/SlithIR">https://github.com/crytic/slither/wiki/SlithIR</a></p>
-<blockquote>
-</blockquote>
-<p>Slither 将 Solidity 转换为<code>中间表示 SlithIR</code>，以通过简单的 API 实现高精度分析。它支持<code>污点</code>和<code>变量</code>跟踪，以实现复杂模式的检测。 </p>
-<p>SlithIR 虽然今天可用，但它仍在不断的完善中。 SlithIR 的发展需求也多来自新的<code>检测器模块</code>。</p>
-<p>SlithIR是一种中间语言表示，Slither通过使用自己的中间表示 SlithIR 在 Solidity 上构建创新的漏洞分析。它的主要能力有：</p>
-<ul>
-<li>访问函数的 CFG</li>
-<li>合约的继承</li>
-<li>提供检查 Solidity 表达式的能力。</li>
-</ul>
-<h2 id="CFG"><a href="#CFG" class="headerlink" title="CFG"></a>CFG</h2><p>控制流图（CFG）是一种常见的代码表示。 顾名思义，它是一种基于图的表示方法，展现了所有的代码执行路径。 <code>每个节点(node)包含一条或多条指令</code>。边代表控制流操作（if&#x2F;then&#x2F;else，循环，等等。</p>
-<p>大多数的代码分析技术都是建立在 CFG 的基础表示之上。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>slither静态分析功能</p>
-<p><a target="_blank" rel="noopener" href="https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/">https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/</a></p>
-
-      
     </div>
+  </div>
 
-    
-    
-    
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" rel="tag"># 工具使用</a>
+              <a href="/tags/slither/" rel="tag"># slither</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/08/00-slither-install/" rel="prev" title="00.slither简介与安装">
+      <i class="fa fa-chevron-left"></i> 00.slither简介与安装
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -490,6 +425,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">01.slither基本使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%89%93%E5%8D%B0%E9%80%89%E9%A1%B9%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">1.打印选项的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%88%E7%BA%A6%E6%91%98%E8%A6%81-contract-summary"><span class="nav-number">2.1.</span> <span class="nav-text">合约摘要　contract-summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%87%BD%E6%95%B0%E6%80%BB%E8%A7%88"><span class="nav-number">2.2.</span> <span class="nav-text">查看函数总览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF%E5%9B%BE-inheritance-graph"><span class="nav-number">2.3.</span> <span class="nav-text">继承图　inheritance-graph</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E4%B8%8E%E9%AA%8C%E8%AF%81-vars-and-auth"><span class="nav-number">2.4.</span> <span class="nav-text">变量与验证 vars-and-auth</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%B0%83%E7%94%A8%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="nav-number">2.5.</span> <span class="nav-text">查看调用关系图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0id-function-id"><span class="nav-number">2.6.</span> <span class="nav-text">函数id function-id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E5%8F%98%E9%87%8F%E5%AD%98%E5%82%A8-variable-order"><span class="nav-number">2.7.</span> <span class="nav-text">状态变量存储 variable-order</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">2. 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9"><span class="nav-number">3.1.</span> <span class="nav-text">常用选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A1%E8%AE%A1%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">审计单个文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A3%80%E6%B5%8B%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">3. 自定义检测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="nav-number">4.1.</span> <span class="nav-text">检测器的基本框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E6%A3%80%E6%B5%8B%E5%99%A8%E9%9B%86%E6%88%90%E5%88%B0slither%E4%B8%AD"><span class="nav-number">4.2.</span> <span class="nav-text">将检测器集成到slither中</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%8F%82%E8%80%83"><span class="nav-number">5.</span> <span class="nav-text">4.参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
