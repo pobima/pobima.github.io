@@ -179,10 +179,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-02-08 19:30:07 / 修改时间：19:34:11" itemprop="dateCreated datePublished" datetime="2023-02-08T19:30:07+08:00">2023-02-08</time>
+              <time title="创建时间：2023-02-08 19:30:07" itemprop="dateCreated datePublished" datetime="2023-02-08T19:30:07+08:00">2023-02-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-02-09 10:18:49" itemprop="dateModified" datetime="2023-02-09T10:18:49+08:00">2023-02-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -222,10 +228,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print contract-summary</span><br></pre></td></tr></table></figure>
 
 <p>结果展示</p>
-<img src="/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Untitled.png" class title="result">
-<h2 id="查看函数总览"><a href="#查看函数总览" class="headerlink" title="查看函数总览"></a>查看函数总览</h2><p>打印出函数的总览，包括<code>函数名，函数中读变量和写变量，函数内部调用的方法名，调用外部调用的方法名</code></p>
-<p>slither AirdropSystem.sol –print function-summary</p>
+<div style="width:70%;margin:auto"><img src="/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Untitled.png" class title="result"></div>
+## 查看函数总览
 
+<p>打印出函数的总览，包括<code>函数名，函数中读变量和写变量，函数内部调用的方法名，调用外部调用的方法名</code></p>
+<p>slither AirdropSystem.sol –print function-summary</p>
+<div style="width:70%;margin:auto"></div>
 
 <h2 id="继承图-inheritance-graph"><a href="#继承图-inheritance-graph" class="headerlink" title="继承图　inheritance-graph"></a>继承图　inheritance-graph</h2><p>在当前目录下生成继承关系图。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print inheritance-graph</span><br><span class="line">Inheritance Graph: ./bak/Token/LDC.sol.inheritance-graph.dot</span><br></pre></td></tr></table></figure>
@@ -236,7 +244,7 @@
 <p>brew install graphviz</p>
 <p>brew install xdot</p>
 </blockquote>
-
+<div style="width:70%;margin:auto"></div>
 
 
 <h2 id="变量与验证-vars-and-auth"><a href="#变量与验证-vars-and-auth" class="headerlink" title="变量与验证 vars-and-auth"></a>变量与验证 vars-and-auth</h2><p>这个参数可以打印　合约中的每个函数<code>修改过的合约状态变量</code>，其每个函数中是否有<code>对msg.sender的条件判断</code>。</p>
@@ -244,25 +252,24 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print vars-and-auth</span><br></pre></td></tr></table></figure>
 
 <p>结果展示</p>
-
+<div style="width:70%;margin:auto"></div>
 
 
 <h2 id="查看调用关系图"><a href="#查看调用关系图" class="headerlink" title="查看调用关系图"></a>查看调用关系图</h2><p>slither AirdropSystem.sol –print call-graph</p>
-<p>![Untitled]</p>
-
+<div style="width:70%;margin:auto">
 
 
 <h2 id="函数id-function-id"><a href="#函数id-function-id" class="headerlink" title="函数id function-id"></a>函数id function-id</h2><p>slither AirdropSystem.sol –print function-id</p>
-
+<div style="width:70%;margin:auto"></div>
 
 <h2 id="状态变量存储-variable-order"><a href="#状态变量存储-variable-order" class="headerlink" title="状态变量存储 variable-order"></a>状态变量存储 variable-order</h2><p>该打印模块输出合约的状态变量的存储顺序</p>
 <p><code>—print variable-order</code> 用于打印出合约的状态变量的<code>storage</code>的序列。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print variable-order</span><br></pre></td></tr></table></figure>
 
-
+<div style="width:70%;margin:auto"></div>
 
 <p>可以根据源代码分析其slot的存储情况</p>
-
+<div style="width:70%;margin:auto"></div>
 
 <h1 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h1><h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看检测器数量</span></span><br><span class="line">slither --<span class="built_in">list</span>-detectors</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看可用的打印方式</span></span><br><span class="line">slither --<span class="built_in">list</span>-printers </span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成dot文件，可用sublime的graphvizer打开图片</span></span><br><span class="line">slither aa.sol --<span class="built_in">print</span> inheritance-graph</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -302,7 +309,7 @@
 <p><a target="_blank" rel="noopener" href="https://github.com/crytic/slither/wiki/">https://github.com/crytic/slither/wiki/</a></p>
 <p>solc-select官方github</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/crytic/solc-select/">https://github.com/crytic/solc-select/</a></p>
-
+</div>
       
     </div>
 
@@ -344,10 +351,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-02-08 17:10:31 / 修改时间：19:09:05" itemprop="dateCreated datePublished" datetime="2023-02-08T17:10:31+08:00">2023-02-08</time>
+              <time title="创建时间：2023-02-08 17:10:31" itemprop="dateCreated datePublished" datetime="2023-02-08T17:10:31+08:00">2023-02-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-02-09 10:14:44" itemprop="dateModified" datetime="2023-02-09T10:14:44+08:00">2023-02-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -383,11 +396,11 @@
 <li>Slither 然后将合约的代码翻译成 SlithIR，这是一种内部表示语言，可以更轻松地编写精确和准确的分析。 </li>
 <li>Slither 运行一组预定义的分析，为其他模块（例如，计算数据流、受保护的函数调用等）提供增强的信息。</li>
 </ol>
-<img src="/2023/02/08/00-slither-install/Untitled.jpg" class title="flow">
+<div style="width:70%;margin:auto"><img src="/2023/02/08/00-slither-install/Untitled.jpg" class title="flow"></div>
 
 <h2 id="性能优势"><a href="#性能优势" class="headerlink" title="性能优势"></a>性能优势</h2><p>官方使用重入检测器对 Etherscan 提供源代码的一千个最常用的合约（交易数量最多的合约）进行了实验(每个合约最多执行120秒)，对主流的几款检测工具，得到的结果如下：</p>
 <p>不管从准确性，性能，健壮性等方面，slither都比较优秀。</p>
-<img src="/2023/02/08/00-slither-install/Untitled1.png" class title="flow">
+<div style="width:70%;margin:auto"><img src="/2023/02/08/00-slither-install/Untitled1.png" class title="flow"></div>
 
 <p>可以参考<a target="_blank" rel="noopener" href="https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/">https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/</a></p>
 <h2 id="slither不足"><a href="#slither不足" class="headerlink" title="slither不足"></a>slither不足</h2><p>SlithIR 仍然存在一些局限性并且有改进的空间。主要的不足有：</p>
