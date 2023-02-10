@@ -187,7 +187,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-09 10:18:49" itemprop="dateModified" datetime="2023-02-09T10:18:49+08:00">2023-02-09</time>
+                <time title="修改时间：2023-02-10 11:38:45" itemprop="dateModified" datetime="2023-02-10T11:38:45+08:00">2023-02-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,95 +221,15 @@
 <li>继承图　inheritance-graph</li>
 <li>变量与验证。vars-and-auth</li>
 <li>函数id function-id</li>
-<li>状态变量存储 variable-order</li>
-</ul>
-<h2 id="合约摘要-contract-summary"><a href="#合约摘要-contract-summary" class="headerlink" title="合约摘要　contract-summary"></a>合约摘要　contract-summary</h2><p>这个参数可以打印合约中基本信息，包含合约的<code>函数列表，继承关系</code>等。</p>
-<p>测试命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print contract-summary</span><br></pre></td></tr></table></figure>
-
-<p>结果展示</p>
-<div style="width:70%;margin:auto"><img src="/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Untitled.png" class title="result"></div>
-## 查看函数总览
-
-<p>打印出函数的总览，包括<code>函数名，函数中读变量和写变量，函数内部调用的方法名，调用外部调用的方法名</code></p>
-<p>slither AirdropSystem.sol –print function-summary</p>
-<div style="width:70%;margin:auto"></div>
-
-<h2 id="继承图-inheritance-graph"><a href="#继承图-inheritance-graph" class="headerlink" title="继承图　inheritance-graph"></a>继承图　inheritance-graph</h2><p>在当前目录下生成继承关系图。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print inheritance-graph</span><br><span class="line">Inheritance Graph: ./bak/Token/LDC.sol.inheritance-graph.dot</span><br></pre></td></tr></table></figure>
-
-<p>在mac下，dot格式文件可以通过xdot打开。</p>
-<blockquote>
-<p>xdot安装方式</p>
-<p>brew install graphviz</p>
-<p>brew install xdot</p>
-</blockquote>
-<div style="width:70%;margin:auto"></div>
-
-
-<h2 id="变量与验证-vars-and-auth"><a href="#变量与验证-vars-and-auth" class="headerlink" title="变量与验证 vars-and-auth"></a>变量与验证 vars-and-auth</h2><p>这个参数可以打印　合约中的每个函数<code>修改过的合约状态变量</code>，其每个函数中是否有<code>对msg.sender的条件判断</code>。</p>
-<p>测试命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print vars-and-auth</span><br></pre></td></tr></table></figure>
-
-<p>结果展示</p>
-<div style="width:70%;margin:auto"></div>
-
-
-<h2 id="查看调用关系图"><a href="#查看调用关系图" class="headerlink" title="查看调用关系图"></a>查看调用关系图</h2><p>slither AirdropSystem.sol –print call-graph</p>
-<div style="width:70%;margin:auto">
-
-
-<h2 id="函数id-function-id"><a href="#函数id-function-id" class="headerlink" title="函数id function-id"></a>函数id function-id</h2><p>slither AirdropSystem.sol –print function-id</p>
-<div style="width:70%;margin:auto"></div>
-
-<h2 id="状态变量存储-variable-order"><a href="#状态变量存储-variable-order" class="headerlink" title="状态变量存储 variable-order"></a>状态变量存储 variable-order</h2><p>该打印模块输出合约的状态变量的存储顺序</p>
-<p><code>—print variable-order</code> 用于打印出合约的状态变量的<code>storage</code>的序列。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slither ./bak/Token/LDC.sol --print variable-order</span><br></pre></td></tr></table></figure>
-
-<div style="width:70%;margin:auto"></div>
-
-<p>可以根据源代码分析其slot的存储情况</p>
-<div style="width:70%;margin:auto"></div>
-
-<h1 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h1><h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看检测器数量</span></span><br><span class="line">slither --<span class="built_in">list</span>-detectors</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看可用的打印方式</span></span><br><span class="line">slither --<span class="built_in">list</span>-printers </span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成dot文件，可用sublime的graphvizer打开图片</span></span><br><span class="line">slither aa.sol --<span class="built_in">print</span> inheritance-graph</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="审计单个文件"><a href="#审计单个文件" class="headerlink" title="审计单个文件"></a>审计单个文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">slither ../aa.sol</span><br><span class="line">slither aa.sol &amp;&gt; aa.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 分析的链上的地址。https://etherscan.io/address/0x7F37f78cBD74481E593F9C737776F7113d76B315#code</span></span><br><span class="line">slither <span class="number">0x7F37f78cBD74481E593F9C737776F7113d76B315</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="3-自定义检测器"><a href="#3-自定义检测器" class="headerlink" title="3. 自定义检测器"></a>3. 自定义检测器</h1><p>slither支持插件模式，可以自定义检测器扩充检测能力。</p>
-<h2 id="检测器的基本框架"><a href="#检测器的基本框架" class="headerlink" title="检测器的基本框架"></a>检测器的基本框架</h2><p>检测器的基本框架</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from slither.detectors.abstract_detector import AbstractDetector, DetectorClassification</span><br><span class="line"></span><br><span class="line">class Skeleton(AbstractDetector):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    Documentation</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    ARGUMENT = &#x27;mydetector&#x27; # slither will launch the detector with slither.py --detect mydetector</span><br><span class="line">    HELP = &#x27;Help printed by slither&#x27;</span><br><span class="line">    IMPACT = DetectorClassification.HIGH</span><br><span class="line">    CONFIDENCE = DetectorClassification.HIGH</span><br><span class="line"></span><br><span class="line">    WIKI = &#x27;&#x27;</span><br><span class="line"></span><br><span class="line">    WIKI_TITLE = &#x27;&#x27;</span><br><span class="line">    WIKI_DESCRIPTION = &#x27;&#x27;</span><br><span class="line">    WIKI_EXPLOIT_SCENARIO = &#x27;&#x27;</span><br><span class="line">    WIKI_RECOMMENDATION = &#x27;&#x27;</span><br><span class="line"></span><br><span class="line">    def _detect(self):</span><br><span class="line">        info = [&#x27;This is an example&#x27;]</span><br><span class="line">        res = self.generate_result(info)</span><br><span class="line"></span><br><span class="line">        return [res]</span><br></pre></td></tr></table></figure>
-
-<p>参数解释：</p>
-<ul>
-<li><code>ARGUMENT</code> 设置检测器调用的参数。设置后，可以在命令行中通过传入该值达到调用该检测器的功能。</li>
-<li><code>IMPACT</code>: 该检测器的影响等级。<ul>
-<li><code>DetectorClassification.OPTIMIZATION</code>: printed in green</li>
-<li><code>DetectorClassification.INFORMATIONAL</code>: printed in green</li>
-<li><code>DetectorClassification.LOW</code>: printed in green</li>
-<li><code>DetectorClassification.MEDIUM</code>: printed in yellow</li>
-<li><code>DetectorClassification.HIGH</code>: printed in red</li>
-</ul>
-</li>
-<li>CONFIDENCE：检测器的准确性指标。取下面的3个值<ul>
-<li><code>DetectorClassification.LOW</code></li>
-<li><code>DetectorClassification.MEDIUM</code></li>
-<li><code>DetectorClassification.HIGH</code></li>
-</ul>
-</li>
-<li><code>WIKI</code> ：用来自动生成文档的常量</li>
-</ul>
-<p>_detect() 需要返回<code>列表</code>类型，表示检测结果。检测结果是使用 self.generate_result(info) 生成的元素，其中 info 是文本列表或合约对象（合约、函数、节点…）</p>
-<h2 id="将检测器集成到slither中"><a href="#将检测器集成到slither中" class="headerlink" title="将检测器集成到slither中"></a>将检测器集成到slither中</h2><p>有两种集成方式</p>
-<ol>
-<li>把自定义的检测器加入到 <a target="_blank" rel="noopener" href="https://github.com/trailofbits/slither/blob/ae7c410938b616d993e6c27678f6e48d9a4d7dd6/slither/detectors/all_detectors.py">slither&#x2F;detectors&#x2F;all_detectors.py</a></li>
-<li>创建一个插件包。可以参考 <a target="_blank" rel="noopener" href="https://github.com/trailofbits/slither/tree/ae7c410938b616d993e6c27678f6e48d9a4d7dd6/plugin_example">skeleton example</a></li>
-</ol>
-<h1 id="4-参考"><a href="#4-参考" class="headerlink" title="4.参考"></a>4.参考</h1><p><a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.4.21/installing-solidity.html#binary-packages">https://docs.soliditylang.org/en/v0.4.21/installing-solidity.html#binary-packages</a></p>
-<p>官方使用说明</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/crytic/slither/wiki/">https://github.com/crytic/slither/wiki/</a></p>
-<p>solc-select官方github</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/crytic/solc-select/">https://github.com/crytic/solc-select/</a></p>
-</div>
+<li>状态变量存储 variable-order</li></ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/08/01-slither%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -359,7 +279,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-09 10:14:44" itemprop="dateModified" datetime="2023-02-09T10:14:44+08:00">2023-02-09</time>
+                <time title="修改时间：2023-02-10 11:38:35" itemprop="dateModified" datetime="2023-02-10T11:38:35+08:00">2023-02-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -397,45 +317,14 @@
 <li>Slither 运行一组预定义的分析，为其他模块（例如，计算数据流、受保护的函数调用等）提供增强的信息。</li>
 </ol>
 <div style="width:70%;margin:auto"><img src="/2023/02/08/00-slither-install/Untitled.jpg" class title="flow"></div>
-
-<h2 id="性能优势"><a href="#性能优势" class="headerlink" title="性能优势"></a>性能优势</h2><p>官方使用重入检测器对 Etherscan 提供源代码的一千个最常用的合约（交易数量最多的合约）进行了实验(每个合约最多执行120秒)，对主流的几款检测工具，得到的结果如下：</p>
-<p>不管从准确性，性能，健壮性等方面，slither都比较优秀。</p>
-<div style="width:70%;margin:auto"><img src="/2023/02/08/00-slither-install/Untitled1.png" class title="flow"></div>
-
-<p>可以参考<a target="_blank" rel="noopener" href="https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/">https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/</a></p>
-<h2 id="slither不足"><a href="#slither不足" class="headerlink" title="slither不足"></a>slither不足</h2><p>SlithIR 仍然存在一些局限性并且有改进的空间。主要的不足有：</p>
-<ul>
-<li>缺乏形式语义。形式语义会可以带来更严谨的分析方法。</li>
-<li>支持高级表达式从而无法准确反映低级信息，例如无法评估 gas 的消耗等。</li>
-</ul>
-<h1 id="2-mac下slither安装"><a href="#2-mac下slither安装" class="headerlink" title="2.mac下slither安装"></a>2.mac下slither安装</h1><h2 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">bin</span>/ruby -e <span class="string">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span></span><br><span class="line"></span><br><span class="line">brew update</span><br><span class="line">brew upgrade</span><br><span class="line">brew tap ethereum/ethereum</span><br><span class="line">brew install solidity</span><br><span class="line">brew linkapps solidity</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装solc-select"><a href="#安装solc-select" class="headerlink" title="安装solc-select****"></a>安装solc-select****</h2><p><code>pip3 install solc-select</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用0.4.24版本</span></span><br><span class="line">solc-select use <span class="number">0.4</span><span class="number">.24</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印所有可用的版本</span></span><br><span class="line">solc-select install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装0.8.1版本</span></span><br><span class="line">solc-select install <span class="number">0.8</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="安装slither"><a href="#安装slither" class="headerlink" title="安装slither"></a>安装slither</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Using Pip</span><br><span class="line">pip3 install slither-analyzer</span><br><span class="line"></span><br><span class="line">Using Git</span><br><span class="line">git clone https://github.com/crytic/slither.git &amp;&amp; cd slither</span><br><span class="line">python3 setup.py install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="3-slither的目录结构"><a href="#3-slither的目录结构" class="headerlink" title="3.slither的目录结构"></a>3.slither的目录结构</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── analyses # 提供附加信息，例如数据依赖性分析，evm合约、函数、节点的分析等。</span><br><span class="line">├── core # 把各类东西联系在一起</span><br><span class="line">├── detectors # 检测器。各种检测规则</span><br><span class="line">├── slither.py # 入口脚本</span><br><span class="line">├── slithir # 包含 slither 的中间表示的语义</span><br><span class="line">├── solc_parsing #负责解析solc AST(抽象语法树)</span><br><span class="line">├── tools # 建立在 slither 之上的各种工具</span><br><span class="line">├── visitors # 解析表达式并转换为 slithir</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
-
-<h1 id="4-slither中常用的概念"><a href="#4-slither中常用的概念" class="headerlink" title="4. slither中常用的概念"></a>4. slither中常用的概念</h1><h2 id="SlitherIR"><a href="#SlitherIR" class="headerlink" title="SlitherIR"></a>SlitherIR</h2><blockquote>
-<p>什么是IR</p>
-</blockquote>
-<p>在语言设计中，编译器通常对一种语言的<code>“中间表示”(IR)</code> 进行操作，在这种中间语言中可以看到程序解析时额外细节。<br><a target="_blank" rel="noopener" href="https://github.com/crytic/slither/wiki/SlithIR">https://github.com/crytic/slither/wiki/SlithIR</a></p>
-<blockquote>
-</blockquote>
-<p>Slither 将 Solidity 转换为<code>中间表示 SlithIR</code>，以通过简单的 API 实现高精度分析。它支持<code>污点</code>和<code>变量</code>跟踪，以实现复杂模式的检测。 </p>
-<p>SlithIR 虽然今天可用，但它仍在不断的完善中。 SlithIR 的发展需求也多来自新的<code>检测器模块</code>。</p>
-<p>SlithIR是一种中间语言表示，Slither通过使用自己的中间表示 SlithIR 在 Solidity 上构建创新的漏洞分析。它的主要能力有：</p>
-<ul>
-<li>访问函数的 CFG</li>
-<li>合约的继承</li>
-<li>提供检查 Solidity 表达式的能力。</li>
-</ul>
-<h2 id="CFG"><a href="#CFG" class="headerlink" title="CFG"></a>CFG</h2><p>控制流图（CFG）是一种常见的代码表示。 顾名思义，它是一种基于图的表示方法，展现了所有的代码执行路径。 <code>每个节点(node)包含一条或多条指令</code>。边代表控制流操作（if&#x2F;then&#x2F;else，循环，等等。</p>
-<p>大多数的代码分析技术都是建立在 CFG 的基础表示之上。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>slither静态分析功能</p>
-<p><a target="_blank" rel="noopener" href="https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/">https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/08/00-slither-install/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
