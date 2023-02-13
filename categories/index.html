@@ -210,13 +210,6 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -379,23 +372,6 @@
   
 
   
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
-    window.dsqjs = new DisqusJS({
-      api       : 'https://disqus.skk.moe/disqus/' || 'https://disqus.com/api/',
-      apikey    : 'YXfHrh10Efla1NNfn4eAtI099DmcUkreYDiVQA9M1h8uChOao3nf7hiNPienMZYS',
-      shortname : 'pobima',
-      url       : "http://example.com/categories/index.html",
-      identifier: "categories/index.html",
-      title     : "文章分类",
-    });
-  }, window.DisqusJS);
-});
-</script>
 
 </body>
 </html>
